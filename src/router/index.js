@@ -30,6 +30,21 @@ import Layout from '@/layout'
 
 // 公共路由
 export const constantRoutes = [
+
+  {
+    path: '/ai',
+    component: Layout,
+    redirect: '/ai/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/ai/index'),
+        name: 'AiChat',
+        meta: { title: 'AI 求职助手', icon: 'guide', noCache: true }
+      }
+    ]
+  },
+  
   {
     path: '/redirect',
     component: Layout,

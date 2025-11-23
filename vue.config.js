@@ -42,8 +42,11 @@ module.exports = {
         pathRewrite: {
           ['^' + process.env.VUE_APP_BASE_API]: ''
         }
-      }
+      },
+      
     },
+
+
     disableHostCheck: true
   },
   css: {
